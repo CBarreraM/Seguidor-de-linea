@@ -33,11 +33,11 @@ void Robot_Seguidor::Modo_Seguidor(int Kp,int Ki,int Kd,int Velocidad)
 void Robot_Seguidor::Lectura_de_sensores()
 {
   
-  sensor[0]=Sensor_1.Leer_sensor();
-  sensor[1]=Sensor_2.Leer_sensor();
-  sensor[2]=Sensor_3.Leer_sensor();
-  sensor[3]=Sensor_4.Leer_sensor();
-  sensor[4]=Sensor_5.Leer_sensor();
+  sensor[0]=!Sensor_1.Leer_sensor();
+  sensor[1]=!Sensor_2.Leer_sensor();
+  sensor[2]=!Sensor_3.Leer_sensor();
+  sensor[3]=!Sensor_4.Leer_sensor();
+  sensor[4]=!Sensor_5.Leer_sensor();
   
   //Detectar la desviacion ("Error") del seguidor de linea
   if((sensor[0]==0)&&(sensor[1]==0)&&(sensor[2]==0)&&(sensor[3]==0)&&(sensor[4]==0))
